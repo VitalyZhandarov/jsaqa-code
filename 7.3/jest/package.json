@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jet --watchAll",
-    "test:collect": "jest --collectCoverage"
+    "coverage": "jest --collectCoverage --config=jestconfig.json"
   },
   "keywords": [
     "jest",
