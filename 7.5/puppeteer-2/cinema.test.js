@@ -47,11 +47,11 @@ describe("Сinema tests", () => {
     expect(placeNumber).toEqual("4/4, 4/5, 4/6");
     }, 60000);
 
-  test("Попытка купить занятые места на Микки маус на завтра", async () => {
-    await clickElement(page, "nav > a:nth-child(2)");
-    await clickElement(page, "body > main > section:nth-child(2) > div.movie-seances__hall > ul > li:nth-child(1) > a");
+  test("Попытка купить занятые места на Зверополис на послезавтра", async () => {
+    await clickElement(page, "nav > a:nth-child(3)");
+    await clickElement(page, "body > main > section:nth-child(1) > div.movie-seances__hall > ul > li:nth-child(2) > a");
     await page.waitForSelector("div.buying-scheme");
-    const place = ".buying-scheme__wrapper > :nth-child(5) > :nth-child(5)";
+    const place = ".buying-scheme__wrapper > :nth-child(6) > :nth-child(4)";
     await clickElement(page, place);
     await clickElement(page, "button.acceptin-button");
     const stateOfButton = await page.$eval('button', (button) => {
